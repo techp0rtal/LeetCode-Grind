@@ -16,3 +16,20 @@ def containsDuplicate(nums):
 
 
 containsDuplicate([1, 2, 3, 67, 923, 0, 3])
+
+"""
+Optimized code:
+def containsDuplicate(nums):
+    seen = set()  # Create an empty set
+    for num in nums:  # Loop through each number in the list
+        if num in seen:  # Check if the number is already in the set
+            return True  # If yes, we found a duplicate
+        seen.add(num)  # Otherwise, add the number to the set
+    return False  # No duplicates found
+
+Why couldn't you just use an empty list instead of a set? You could, but this is optimal bc it is much FASTER.
+Remember checking if something belongs in a list is O(n), while using a set is O(1). This method makes it as fast
+as possible by making use of the O(1) features of sets. 
+ 
+
+"""
